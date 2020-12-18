@@ -5,7 +5,7 @@
       </div>
       <div class="navitems">
         <ul>
-            <li v-for="nav in navs" :key="nav"><nuxt-link :to="`/${nav.link}`">{{nav.name}}</nuxt-link></li>
+            <li v-for="nav in navs" :key="nav.name"><nuxt-link :to="`/${nav.link}`">{{nav.name}}</nuxt-link></li>
         </ul>
       </div>
   </div>

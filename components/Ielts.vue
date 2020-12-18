@@ -1,8 +1,6 @@
-<template>
+0<template>
 <div>
-  
-
-  <div class="container">
+  <div class="container" data-aos="fade-left" data-aos-duration="1500">
     <div class="text-content">
       <h1>IELTS test structure</h1>
       <p>
@@ -15,11 +13,11 @@
       <button>Read More</button>
     </div>
     <div class="box">
-      <div class="card" v-for="item in ielts" :key="item">
-        <div v-for="content in item.type" :key="content">
+      <div class="card" v-for="(item,index) in ielts" :key="index">
+        <div v-for="content in item.type" :key="content.name">
           <img  :src="content.image" :alt="content.name">
           <h2>{{content.name}}</h2>
-          <p v-for="text in content.content" :key="text">{{text}}</p>
+          <p v-for="(text,index) in content.content" :key="index">{{text}}</p>
         </div>
       </div>
     </div>
@@ -80,14 +78,12 @@ export default {
 <style scoped>
 .text-content{
     padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: #1a1e66;
 }
 .container {
   display: flex;
   padding: 0 80px;
+  margin: 60px 0;
 }
 .box{
   display: flex;
@@ -109,6 +105,9 @@ export default {
 .card:hover {
   background-image: linear-gradient(to top, #f44c01, #ff7a01);
   transition: all 300ms linear 0ms;
+}
+.card p{
+  margin: 0;
 }
 p{
   margin-bottom: 25px;

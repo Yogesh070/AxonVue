@@ -14,7 +14,7 @@
       <div class="links">
           <h2>Links</h2>
           <ul>
-              <li v-for="nav in navs" :key="nav"><nuxt-link :to="`/${nav.link}`">{{nav.name}}</nuxt-link></li>
+              <li v-for="nav in navs" :key="nav.name"><nuxt-link :to="`/${nav.link}`">{{nav.name}}</nuxt-link></li>
           </ul>
       </div>
       <div class="gallery">
@@ -22,7 +22,7 @@
           <div class="socials">
               <h2>Find us at</h2>
               <ul>
-                  <li v-for="social in socials" :key="social"><a :href="social.link">{{social.name}}</a></li>
+                  <li v-for="social in socials" :key="social.name"><a :href="social.link"><img :src="'/_nuxt/assets/'+ social.name" :alt="social.name"></a></li>
               </ul>
           </div>
       </div>
@@ -31,7 +31,7 @@
           <div>
               <p>2020 © All rights reserved by Axon Education</p>
           </div>
-          <div><p>Find us at:<a v-for="social in socials" :key="social" :href="social.link">{{social.name}}</a></p></div>   
+          <div><p>Find us at:<a v-for="social in socials" :key="social.name" :href="social.link">{{social.name}}</a></p></div>   
       </div>
 </div>
 </template>
@@ -42,15 +42,15 @@ data(){
     return{
         socials:[
             {
-                name:"Facebook",
+                name:"fb.png",
+                link:"www.facebook.com"
+            },
+            {
+                name:"insta.png",
                 link:""
             },
             {
-                name:"Insta",
-                link:""
-            },
-            {
-                name:"Twitter",
+                name:"twitter.png",
                 link:""
             },
         ],

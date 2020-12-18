@@ -1,6 +1,6 @@
 <template>
 <div class="parent">
-    <div class="card" v-for="item in country" :key="item.name">
+    <div class="card" v-for="item in country" :key="item.name" data-aos="zoom-in-up">
         <div>
             <img :src="item.image" :alt="item.name" srcset="">
             <h3>{{item.name.toUpperCase()}}</h3>
