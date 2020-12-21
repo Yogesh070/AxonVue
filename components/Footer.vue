@@ -3,9 +3,9 @@
   <div class="container">
         <div class="contacts">
             <ul>
-                <li>+977 9816162091 / 9802821038</li>
-                <li>mail@axon.edu.np</li>
-                <li>Panthi Galli,Pokhara 33700</li>
+                <li v-for="(head,index) in heads" :key="index">
+                    <font-awesome-icon :icon="['fas', `${head.icon}`]"/> {{head.text}}
+                </li>
             </ul>
             <div>
                 <img src="../assets/axonlogo.png" alt="logo" srcset="">
@@ -40,6 +40,20 @@
 export default {
 data(){
     return{
+        heads:[
+            {
+                icon:"envelope",
+                text:"mail@axon.edu.np"
+            },
+            {
+                icon:"phone",
+                text:"061527146, 9805821350"
+            },
+            {
+                icon:"map-marker-alt",
+                text:"Panthi galli, Pokhara, Nepal"
+            },
+        ],
         socials:[
             {
                 name:"facebook",
@@ -87,7 +101,7 @@ a{
     justify-content: space-around;
     /* align-items: center; */
     background-color: #1a1e66;
-    padding: 80px;
+    padding: 80px 0;
 }
 ul li{
     list-style-type: none;
@@ -111,7 +125,7 @@ img{
 .gallery{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 .socials ul{
     display: flex;
@@ -119,7 +133,7 @@ img{
 }
 .socials ul li{
     margin-right:10px;
-    font-size: 38px;
+    font-size: 32px;
 }
 .copyright{
     display: flex;

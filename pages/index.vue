@@ -9,11 +9,15 @@
     </div>
   </div>
   <Countries/>
+  <TestStructure/>
   <Ielts/>
+  <div class="steps-container"></div>
+  <div class="empty-container" data-aos="fade-up" data-aos-duration="1500"></div>
 </div>
 </template>
 
 <script>
+import TestStructure from '@/components/TestStructure.vue';
 import Navbar from '@/components/Navbar.vue';
 import Countries from '@/components/Countries.vue';
 import Ielts from '@/components/Ielts.vue';
@@ -21,7 +25,8 @@ export default {
   components:{
     Navbar,
     Countries,
-    Ielts
+    Ielts,
+    TestStructure
   }
 }
 </script>
@@ -50,5 +55,19 @@ export default {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 13px;
+}
+.empty-container{
+  height: 100vh;
+  background-image: url("https://cdn.statically.io/img/axon.edu.np/f=auto%2Cq=80/wp-content/uploads/2020/02/axon-group-2-scaled.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.steps-container{
+  height: 100vh;
+  background-image: url("https://cdn.statically.io/img/axon.edu.np/f=auto%2Cq=80/wp-content/uploads/2020/03/OGA3ET0-scaled.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 </style>

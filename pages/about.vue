@@ -1,8 +1,10 @@
 <template>
   <div>
+      <Header title="About us"/>
       <div class="container">
           <div class="top-container">
             <div class="card" data-aos="fade-up" data-aos-duration="3000" v-for="card in cards" :key="card.title">
+                <div><font-awesome-icon :icon="['fas',`${card.icon}`]"/></div>
                 <h2>{{card.title}}</h2>
                 <p>{{card.text}}</p>
             </div>
@@ -44,10 +46,12 @@
 </template>
 
 <script>
+import Header from '@/components/Header.vue';
 import ChooseUs from '@/components/ChooseUs.vue';
 export default {
     components:{
         ChooseUs,
+        Header
     },
     data(){
         return{
@@ -65,14 +69,17 @@ export default {
             },],
             cards:[
                 {
+                    icon:"crown",
                     title:"Business Growth",
                     text:"The argument in favor of using filler text goes some labore et dolore magna aliqua consectetur."
                 },
                 {
+                    icon:"laptop",
                     title:"Strategy Process",
                     text:"The argument in favor of using filler text goes some labore et dolore magna aliqua consectetur."
                 },
                 {
+                    icon:"hand-holding-usd",
                     title:"Finance Manage",
                     text:"The argument in favor of using filler text goes some labore et dolore magna aliqua consectetur."
                 },
@@ -98,6 +105,34 @@ export default {
     padding: 40px 20px;
     margin: 0 15px;
     min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card div{
+    position: absolute;
+    top: -40px;
+    padding: 22px 20px;
+    border-radius: 50%;
+    background-color: #3140fc;
+    color: white;
+}
+.card svg{
+    font-size: 32px;
+}
+.card:hover svg{
+    animation-name: rotateIcon;
+    animation-duration: 1.5s;
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .card h2{
     line-height: 1.625;
