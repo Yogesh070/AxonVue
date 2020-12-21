@@ -22,7 +22,7 @@
           <div class="socials">
               <h2>Find us at</h2>
               <ul>
-                  <li v-for="social in socials" :key="social.name"><a :href="social.link"><img :src="'/_nuxt/assets/'+ social.name" :alt="social.name"></a></li>
+                  <li v-for="social in socials" :key="social.name"><a :href="social.link" target="_blank"><font-awesome-icon :icon="['fab', `${social.name}`]"/></a></li>
               </ul>
           </div>
       </div>
@@ -31,7 +31,7 @@
           <div>
               <p>2020 © All rights reserved by Axon Education</p>
           </div>
-          <div><p>Find us at:<a v-for="social in socials" :key="social.name" :href="social.link">{{social.name}}</a></p></div>   
+          <div><p>Find us at:<a  v-for="social in socials" :key="social.name" :href="social.link" target="_blank"><font-awesome-icon :icon="['fab', `${social.name}`]"/></a></p></div>   
       </div>
 </div>
 </template>
@@ -42,16 +42,16 @@ data(){
     return{
         socials:[
             {
-                name:"fb.png",
-                link:"www.facebook.com"
+                name:"facebook",
+                link:"http://www.facebook.com"
             },
             {
-                name:"insta.png",
-                link:""
+                name:"instagram",
+                link:"http://www.instagram.com"
             },
             {
-                name:"twitter.png",
-                link:""
+                name:"twitter",
+                link:"http://www.twitter.com"
             },
         ],
         navs:[
@@ -119,6 +119,7 @@ img{
 }
 .socials ul li{
     margin-right:10px;
+    font-size: 38px;
 }
 .copyright{
     display: flex;
@@ -129,5 +130,15 @@ img{
 }
 .copyright a{
     margin: 0 10px;
+}
+
+.fa-instagram{
+    color: #E1306C;
+}
+.fa-twitter{
+    color: #1DA1F2;
+}
+.fa-facebook{
+    color: white;
 }
 </style>
