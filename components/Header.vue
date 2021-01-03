@@ -18,13 +18,21 @@
         </ul>
       </div>
       <div class="image-bar">
-          <h1>Strategy for Norway’s Pesion Fund <br>Global</h1>
+          <div>
+            <h1>{{title}}</h1>
+            <a href="/">Education Consultancy in Nepal</a>
+            <p>{{title}}</p> 
+          </div>
+          
       </div>
   </div>
 </template>
 
 <script>
 export default {
+    props:{
+        title:String,
+    },
     
 data(){
     return{
@@ -39,7 +47,7 @@ data(){
             },
             {
                 icon:"map-marker-alt",
-                text:"'Panthi galli, Pokhara, Nepal"
+                text:"Panthi galli, Pokhara, Nepal"
             },
         ],
         navs:[
@@ -99,7 +107,7 @@ a{
 }
 
 .navitems{
-    background-color: rgb(0, 0, 0,0.7);
+    background-color: rgba(34, 33, 33);
 }
 .navitems ul{
     font-size: 20px;
@@ -120,13 +128,28 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("https://previews.123rf.com/images/bialasiewicz/bialasiewicz1706/bialasiewicz170600385/79458613-happy-team-members-clapping-their-hands-in-office.jpg");
+    background-image: url("https://dashofred.com.au/wp-content/uploads/2016/05/Marketing-Automation.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
     min-height: 40vh;
 }
 .image-bar h1{
-    font-size: 3rem;
+    font-size: 60px;
+}
+.image-bar div{
+    margin: 0 auto 0 160px;
+    position: relative;
+    padding: 0 40px;
+}
+.image-bar div::before{
+    content: '';
+    width: 4px;
+    top: 16px;
+    bottom: 4px;
+    left: 0;
+    background-color: #3140fc;
+    position: absolute;
+
 }
 </style>
