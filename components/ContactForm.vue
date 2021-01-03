@@ -69,7 +69,6 @@ input[type=submit]{
 /* hover and focus states */
 input[type=submit]:hover,
 input[type=submit]:focus{
-  background: ;
   outline:none;
 }
 

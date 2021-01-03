@@ -10,7 +10,6 @@
   </div>
   <Countries/>
   <TestStructure/>
-  <Ielts/>
   <div class="steps-container"></div>
   <div class="empty-container" data-aos="fade-up" data-aos-duration="1500"></div>
 </div>
@@ -20,12 +19,10 @@
 import TestStructure from '@/components/TestStructure.vue';
 import Navbar from '@/components/Navbar.vue';
 import Countries from '@/components/Countries.vue';
-import Ielts from '@/components/Ielts.vue';
 export default {
   components:{
     Navbar,
     Countries,
-    Ielts,
     TestStructure
   }
 }
