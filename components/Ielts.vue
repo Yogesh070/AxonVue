@@ -1,4 +1,4 @@
-0<template>
+<template>
 <div>
   <div class="container" data-aos="fade-left" data-aos-duration="1500">
     <div class="text-content">
@@ -76,18 +76,21 @@ export default {
 </script>
 
 <style scoped>
-.text-content{
-    padding: 50px;
-    color: #1a1e66;
-}
+
 .container {
-  display: flex;
-  padding: 0 80px;
-  margin: 60px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 50px;
+}
+.text-content{
+  padding: 50px;
+  color: #1a1e66;
 }
 .box{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 .card {
   background-color: white;
@@ -99,8 +102,6 @@ export default {
   text-align: center;
   min-height: 270px;
   min-width: 270px;
-  padding: 47px 30px;
-  margin: 20px;
 }
 .card:hover {
   background-image: linear-gradient(to top, #f44c01, #ff7a01);
@@ -129,5 +130,14 @@ button{
 }
 button:hover{
   opacity: 0.8;
+}
+@media only screen and (max-width: 900px) {
+  .container {
+  grid-template-columns: 1fr;
+}
+.box{
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
 }
 </style>
