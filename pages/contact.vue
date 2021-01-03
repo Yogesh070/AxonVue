@@ -10,9 +10,7 @@
                 <p><font-awesome-icon :icon="['fas','phone']"/> +98554466444</p>
                 <p><font-awesome-icon :icon="['fas','envelope']"/>Support@mail.com</p>
             </div>
-            <div>
-                <ContactForm/>
-            </div>
+            <ContactForm/>
         </div>
     </div>
     <div class="container">
@@ -92,7 +90,19 @@ export default {
     justify-content: space-between;
     align-items: center;
 }
+.appointment-container{
+    flex-wrap: wrap;
+}
 .appointment-container>div{
     max-width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+  .appointment-container>div{
+    max-width: 100%;
+}
+.appointment{
+    padding: 0;
+}
 }
 </style>
